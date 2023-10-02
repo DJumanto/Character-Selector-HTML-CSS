@@ -7,11 +7,28 @@ body{
     overflow: hidden;
 }
 
+.character-boxes p{
+    font-size: 0px;
+    color: white;
+    position: absolute;
+    transition: 1s;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Mortal Kombat Mythologies', sans-serif;
+    transition-delay: 800ms;
+    transition: font-size 500ms, 400ms;
+    transform: translateY(100px);
+    pointer-events: none;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
 .character-selector{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    position: relative;
 }
 
 .character-selector img{
@@ -19,24 +36,40 @@ body{
     justify-content: center;
     align-items: center;
     background-color: black;
-    overflow: hidden;
 }
 
 .character-selector img{
     filter: grayscale(100%);
-    width: 100px;
+    opacity: 70%;
+    width: 75px;
     height: 300px;
     object-fit: cover;
-    transition: filter 400ms, 400ms;
+    transition: filter 400ms, 300ms, opacity 300ms;
 }
 
 .character-selector img:hover{
     filter: grayscale(0%);
     width: 268px;
     height: 335px;
+    opacity: 1;
 }
 
-.character-selector img:nth-child(odd) {
-    transform: translateY(-75px);
+.character-selector :nth-child(odd) {
+    transform: translateY(-55px);
 }
 
+
+.character-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-selector img:hover + p {
+    display: block;
+    font-size: 14px;
+    color: white;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(60px);
+}
