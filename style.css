@@ -1,6 +1,5 @@
 body{
-    width: 1920px;
-    height: 900px;
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +12,14 @@ body{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.character-selector img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
 }
 
 .character-selector img{
