@@ -1,0 +1,34 @@
+body{
+    width: 1920px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.character-selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.character-selector img{
+    filter: grayscale(100%);
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+    transition: filter 400ms, 400ms;
+}
+
+.character-selector img:hover{
+    filter: grayscale(0%);
+    width: 268px;
+    height: 335px;
+}
+
+.character-selector img:nth-child(odd) {
+    transform: translateY(-75px);
+}
+
