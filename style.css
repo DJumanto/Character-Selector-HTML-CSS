@@ -5,6 +5,39 @@ body{
     align-items: center;
     background-color: black;
     overflow: hidden;
+    font-family: 'Mortal Kombat Mythologies', sans-serif;
+}
+
+.character-container{
+    border-color: white;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.character-container h1{
+    color: white;
+}
+
+
+.character-selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.character-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .character-boxes p{
@@ -13,8 +46,6 @@ body{
     position: absolute;
     transition: 1s;
     padding: 10px;
-    font-weight: bold;
-    font-family: 'Mortal Kombat Mythologies', sans-serif;
     transition-delay: 800ms;
     transition: font-size 500ms, 400ms;
     transform: translateY(100px);
@@ -23,49 +54,33 @@ body{
     opacity: 0;
 }
 
-.character-selector{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    position: relative;
-}
-
-.character-selector img{
+.character-boxes img{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-}
-
-.character-selector img{
     filter: grayscale(100%);
     opacity: 70%;
     width: 75px;
     height: 300px;
     object-fit: cover;
     transition: filter 400ms, 300ms, opacity 300ms;
+    box-shadow: none;
 }
 
-.character-selector img:hover{
+.character-boxes img:hover{
     filter: grayscale(0%);
-    width: 268px;
-    height: 335px;
+    width: 230px;
+    height: 300px;
     opacity: 1;
+    object-fit: cover;
 }
 
 .character-selector :nth-child(odd) {
-    transform: translateY(-55px);
+    transform: translateY(-35px);
 }
 
-
-.character-boxes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.character-selector img:hover + p {
+.character-boxes img:hover + p {
     display: block;
     font-size: 14px;
     color: white;
